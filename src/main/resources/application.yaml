@@ -1,0 +1,19 @@
+server:
+  port: 5001
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+keycloak:
+  realm: MyRealm
+  auth-server-url: http://0.0.0.0:8080/
+  resource: employeeManagementClient
+  public-client: true
+  bearer-only: true
